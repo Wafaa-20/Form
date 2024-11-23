@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jquery library  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    <script src="assign.js"></script>
+    <link rel="stylesheet" href="assign.css">
+    <title>Assignment 2</title>
+</head>
+<body>
+    
+    <!-- action="/server" -->
+    <form  action="/server" name="frm" method="post" autocomplete="on" onsubmit="return validateForm()">
+
+        <!-- text input -->
+        <label> 
+            full Name:
+            <input type="text" name="fname" id="Fullname" placeholder=" Enter Your Full Name " required />
+        </label>
+
+        <label>
+            Email:
+            <input type="email" id="email" name="email" placeholder="example@hotmail.com">
+        </label>
+
+        <label>
+            <!-- pattern="966\d[0-9]{9}"  -->
+            Mobile:
+            <input type="tel" id="mobile" name="contact" placeholder="966541012030" required>
+        </label>
+
+        <label> Gender:
+            <label> <input name="gender" type="radio" value="Female"> Female </label>
+            <label> <input name="gender" type="radio" value="Male"> Male </label>
+        </label>
+
+        <label>
+            Language:
+            <select id="languageList"  name="language" >
+                <option value="English">English</option>
+                <option value="France">France</option>
+                <option value="Arabic" selected>Arabic</option>
+                <option value="latin">latin</option>
+                <option value="german">german</option>
+                <option value="korean">korean</option>
+            </select>
+        </label>
+
+        <label>
+            Date of Birth:
+            <input type="date" name="birth" id="birthDate" min="2002-01-01" required>
+        </label>
+        
+
+        <label>
+            Service Requested:
+            <select id="serviceList" name="service" required>
+                <option value="Buying a Domain">Buying a Domain</option>
+                <option value="Creating a Website">Creating a Website</option>
+                <option value="Maintaining an Existing Website">Maintaining an Existing Website</option>
+            </select>
+        </label>
+
+        <label>
+            Due Date:
+            <input type="date" id="due" name="duedate" required>
+        </label>
+        
+        <label>
+            Details of The Request:
+            <textarea id="details" name="detailReq" placeholder="Type your Message here." required></textarea>
+        </label>
+        
+        <label>
+            Upload Supporting Files: 
+            <input type="file" id="myFile" name="file" >
+        </label> 
+
+        <p class="buttons">
+            <input class="Button" id="submitButton" type="submit" value="Submit" />
+            <input class="Button" id="clearButton" type="reset" value="Clear" />
+        </p>
+        
+    </form>
+
+</body>
+</html>
